@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+      /* ----- 出力ターゲット ----- */
+      "target": "ES6",
+      "module": "ESNext",
+      "moduleResolution": "Node",
+  
+      /* ----- 互換性と利便性 ----- */
+      "esModuleInterop": true,      // import GUI from 'lil-gui' を可能に
+      "strict": true,               // 型安全を高める (任意で off 可)
+      "skipLibCheck": true,         // node_modules の型チェックをスキップ
+      "sourceMap": true,
+  
+      /* ----- パス解決 ----- */
+      "baseUrl": "./",
+      "paths": {
+        "*": [
+          "*",
+          "@types/*",
+          "node_modules/@types/*"
+        ]
+      },
+  
+      /* ----- 出力先 ----- */
+      "outDir": "./dist"            // なくても動くが build 時に便利
+    },
+  
+    /* ts-node / VS Code IntelliSense が見る対象 */
+    "include": ["src/**/*"],
+  
+    /* ビルド対象から除外したいフォルダ */
+    "exclude": ["node_modules"]
+  }
+  
